@@ -7,6 +7,8 @@ public class Jonathan3 {
         int y = 4;
         int sum = (x + y);
         int TwiceSum = 2 * sum;
+        int triple = 3 * sum;
         System.out.println(TwiceSum);
+        System.out.println(triple);
     }
 }
