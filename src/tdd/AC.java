@@ -2,6 +2,7 @@ package tdd;
 
 public class AC {
 
+
     private boolean isOn;
     private int temperature = 16;
 

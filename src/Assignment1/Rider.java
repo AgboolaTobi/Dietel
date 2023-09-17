@@ -2,9 +2,6 @@ package Assignment1;
 
 public class Rider {
 
-    public static void main(String[] args) {
-
-    }
 
     public static void printPay1(int numberOfSuccessfulDeliveries) {
         int basePay = 5000;

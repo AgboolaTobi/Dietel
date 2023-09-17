@@ -1,4 +1,4 @@
-package classExercises;
+package Dietelchapter3;
 
 public class AccountOne{
 
