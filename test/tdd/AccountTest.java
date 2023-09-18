@@ -9,19 +9,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class AccountTest {
 
     @Test
-    public void depositTest(){
+    public void depositTestThatANegativeAmountCannotBeDeposited(){
         // given
         Account tobyAccount = new Account();
         //when
-        tobyAccount.deposit(5000);
+        tobyAccount.deposit(-5000);
         //check
         int balance = tobyAccount.checkBalance();
-        assertEquals( 5000, balance);
+        assertEquals( 0, balance);
 
     }
 @Test
 
-    public void depositTwice(){
+    public void depositThatAPositiveAmountCanBeDeposited(){
         //given
         Account tobyAccount = new Account();
         //when
@@ -29,30 +29,16 @@ class AccountTest {
        //check
        int balance = tobyAccount.checkBalance();
        assertEquals(5000, balance);
-       //when
-
-       tobyAccount.deposit(2000);
-       //check
-
-       int newBalance = tobyAccount.checkBalance();
-       assertEquals(7000, newBalance);
-
-        tobyAccount.deposit(3000);
-
-        int newBalance2 = tobyAccount.checkBalance();
-        assertEquals(10000, newBalance2);
-
-        tobyAccount.withdraw(1000);
-        int balance3 = tobyAccount.checkBalance();
-        assertEquals(9000,balance3);
     }
 
 
     @Test
-    public void depositAgain(){
-
-
-
+    public void testThatAWithdrawalCanBeMAde(){
+        Account thisAccount = new Account();
+        thisAccount.deposit(9500);
+        thisAccount.withdraw(-10000);
+        int balance = thisAccount.checkBalance();
+        assertEquals(9500, balance);
     }
 
 

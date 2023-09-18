@@ -9,7 +9,7 @@ public class SumOfFactors {
         int number = input.nextInt();
         int result =0;
         for (int count=1; count<= number;count++){
-            if(number%count==0){
+            if(number % count == 0){
                 result = result +1;
             }
         }

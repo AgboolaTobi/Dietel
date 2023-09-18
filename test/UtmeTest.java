@@ -2,8 +2,14 @@ import Assignment1.Utme;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class UtmeTest {
+    @Test
+    public void testThatUtmeExist() {
+        Utme myUtme = new Utme();
+        assertNotNull(myUtme);
+    }
 
     @Test
     public void testThatCopiesBetweenOneAndFourIs2000PerCopy() {
@@ -36,7 +42,7 @@ public class UtmeTest {
     }
 
     @Test
-    public void testThatCopiesBetween200And499Is1100PerCopy() {
+    public void testThatCopiesBeween200And499Is1100PerCopy() {
         int amountOfANumberOfCopiesWithinThisRange = Utme.amountPerCopy(200);
         assertEquals(220000, amountOfANumberOfCopiesWithinThisRange);
     }
