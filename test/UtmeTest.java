@@ -36,7 +36,7 @@ public class UtmeTest {
     }
 
     @Test
-    public void testThatCopiesBeween200And499Is1100PerCopy() {
+    public void testThatCopiesBetween200And499Is1100PerCopy() {
         int amountOfANumberOfCopiesWithinThisRange = Utme.amountPerCopy(200);
         assertEquals(220000, amountOfANumberOfCopiesWithinThisRange);
     }
