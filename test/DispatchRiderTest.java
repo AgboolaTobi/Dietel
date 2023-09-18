@@ -6,26 +6,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DispatchRiderTest {
     @Test
     public void testHowMuchRiderWillGetPaidForAbove70SuccessfulDeliveries() {
-       int result =  DispatchRider.printPay(80);
-        assertEquals(45000, result);
+       int riderPay =  DispatchRider.printPay(80);
+        assertEquals(45000, riderPay);
     }
 
     @Test
     public void testHowMuchRiderWillGetPaidForSuccessfulDeliveriesBetween60And69() {
-        int result = DispatchRider.printPay(65);
-        assertEquals(21250, 21250);
+        int riderPay = DispatchRider.printPay(65);
+        assertEquals(21250, riderPay);
     }
 
     @Test
     public void testHowMuchRiderWillGetPaidForSuccessfulDeliveriesBetween50And59() {
-        int result = DispatchRider.printPay(55);
-        assertEquals(16000, 16000);
+        int riderPay = DispatchRider.printPay(55);
+        assertEquals(16000, riderPay);
     }
 
     @Test
     public void testHowMuchRiderWillGetPaidForSuccessfulDeliveriesBelow50() {
-        int result = DispatchRider.printPay(25);
-        assertEquals(9000, 9000);
+        int riderPay = DispatchRider.printPay(25);
+        assertEquals(9000, riderPay);
     }
 
 }
