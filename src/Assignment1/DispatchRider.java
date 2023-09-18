@@ -5,11 +5,11 @@ public class DispatchRider {
 
     }
 
-        public static void printPay(int numberOfSuccessfulDeliveries){
+        public static int printPay(int numberOfSuccessfulDeliveries){
             int basePay = 5000;
             int result = 0;
 
-            if ( numberOfSuccessfulDeliveries >= 70 && (numberOfSuccessfulDeliveries <= 100))  result = numberOfSuccessfulDeliveries * 500 + basePay;
+            if ( numberOfSuccessfulDeliveries >= 70 && numberOfSuccessfulDeliveries <= 100)  result = numberOfSuccessfulDeliveries * 500 + basePay;
 
 
             if ( numberOfSuccessfulDeliveries >= 60 && (numberOfSuccessfulDeliveries <= 69))  result = numberOfSuccessfulDeliveries * 250 + basePay;
@@ -20,7 +20,7 @@ public class DispatchRider {
 
             if ( numberOfSuccessfulDeliveries >= 0  && (numberOfSuccessfulDeliveries <= 50))  result = numberOfSuccessfulDeliveries * 160 + basePay;
 
-            System.out.println(result);
+            return result;
         }
 
 
