@@ -3,11 +3,7 @@ package Assignment1;
 public class ManyFunctions {
 
     public static boolean evenNumber(int integer) {
-        if (integer % 2 != 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return integer % 2 == 0;
     }
 
     public static boolean isPrimeNUmber(int number) {
@@ -17,11 +13,7 @@ public class ManyFunctions {
                 noOfFactor++;
             }
         }
-        if (noOfFactor == 2) {
-            return true;
-        } else {
-            return false;
-        }
+        return noOfFactor == 2;
     }
 
     public static int subtract(int firstNumber, int secondNumber) {
