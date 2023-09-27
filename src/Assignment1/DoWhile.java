@@ -15,7 +15,7 @@ public class DoWhile {
             int secondNumber = scanner.nextInt();
 
             int sum = firstNumber + secondNumber;
-            System.out.println(sum);
+            System.out.println("The sum of the numbers = " + sum);
 
             System.out.println("Do you wish to perform this operation again(press 1 to continue): ");
             number = scanner.nextInt();

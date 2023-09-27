@@ -7,8 +7,6 @@ public class classWork {
     }
     public static void printBox(int numberOfStars) {
         for(int index = 1;index <= numberOfStars; index ++){
-
-            printLogo(numberOfStars);
             printStars(numberOfStars);
         }
     }
