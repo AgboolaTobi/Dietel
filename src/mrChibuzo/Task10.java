@@ -15,6 +15,7 @@ public class Task10 {
             caster = String.valueOf(score);
             result = result + " " + caster;
         }
-        System.out.print(result);
+        System.out.print(" The scores are:" + "[" + result + " ]");
+
     }
 }
