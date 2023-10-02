@@ -128,7 +128,7 @@ public class Nokia {
                                 """);
                         int messageSetting = scan.nextInt();
                         switch (messageSetting) {
-                            case 1:
+                            case 1 -> {
                                 System.out.println("""
                                         Set
                                         1-> Message centre number
@@ -141,14 +141,15 @@ public class Nokia {
                                     case 2 -> System.out.println("Agboola Tobi Samuel");
                                     case 3 -> System.out.println("15days");
                                 }
-                                break;
-                            case 2:
+                            }
+                            case 2 -> {
                                 int common = scan.nextInt();
                                 switch (common) {
                                     case 1 -> System.out.println("Delivery report");
                                     case 2 -> System.out.println("Reply via same centre");
                                     case 3 -> System.out.println("Character support : Agboola Tobi");
                                 }
+                            }
                         }
                         break;
                     case 8:

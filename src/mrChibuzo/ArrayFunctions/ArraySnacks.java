@@ -22,6 +22,31 @@ public class ArraySnacks {
         }
         return largest[total-1];
     }
+    public static  int [] reverseElement(int[] myArray) {
+        int [] element = new int[myArray.length];
+        int count = 0;
+        for( int number = myArray.length - 1; number >= 0 ; number --){
+            element[number] = myArray[count];
+            count = count +1;
+        }
+
+        return element;
+    }
+
+    public static int [] oddlyPositionedElement(int [] myArray){
+        int [] element = new int[myArray.length];
+        for(int number = 0; number < myArray.length;number = number + 2){
+            element[number] = myArray [number];
+        }
+        return element;
+    }
+    public static int [] evenlyPositionedElement(int [] myArray){
+        int [] element = new int[myArray.length];
+        for(int number = 1; number < myArray.length;number = number +2){
+            element[number] = myArray [number];
+        }
+        return element;
+    }
 
     public static int sumForLoop(int[] myArray, int total) {
         int sum=0;
@@ -98,5 +123,4 @@ public class ArraySnacks {
         }
         return check;
     }
-
 }
