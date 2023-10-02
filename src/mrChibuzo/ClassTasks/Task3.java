@@ -1,4 +1,4 @@
-package mrChibuzo;
+package mrChibuzo.ClassTasks;
 
 import java.util.Scanner;
 
