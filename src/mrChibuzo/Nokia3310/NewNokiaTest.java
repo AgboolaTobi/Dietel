@@ -50,7 +50,6 @@ public class NewNokiaTest {
 
                 case 8:
                     System.out.println("""
-                        To continue,
                         Press
                         1. Type Of View
                         2. Memory Status
@@ -469,8 +468,8 @@ public class NewNokiaTest {
                 case 2:{
                     System.out.println("""
                         Phone settings
-                        1.Language
-                        2. Cell waiting options
+                        1. Language
+                        2. Cell info display
                         3. Welcome note
                         4. Network selection
                         5. Lights
