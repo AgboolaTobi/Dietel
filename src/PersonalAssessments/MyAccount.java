@@ -28,10 +28,11 @@ public class MyAccount {
             balance += amount;
         }
         else{
-            amount = balance;
         }
     }
 
 
-
+    public void setName(String name) {
+        this.name = name;
+    }
 }
