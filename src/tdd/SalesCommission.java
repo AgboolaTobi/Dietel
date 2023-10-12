@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class SalesCommission {
 
     public static void main(String[] args) {
+        System.out.println(pay(5000));
     }
 
     public static double pay(double amount) {
