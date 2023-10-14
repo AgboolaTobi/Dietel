@@ -33,4 +33,12 @@ public class CreditCardTest {
         String validity = CreditCard.validity(cardNumber);
         assertEquals(validity, "Valid");
     }
+    @Test
+    public void testForTheValidity3(){
+        String cardNumber = "449831619690403";
+        String cardType = CreditCard.cardType(cardNumber);
+        assertEquals(cardType, "Visa Cards");
+        String validity = CreditCard.validity(cardNumber);
+        assertEquals(validity, "Invalid");
+    }
 }

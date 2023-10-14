@@ -83,27 +83,25 @@ public class Shopping {
                 ------------------------------------------------ 
                 """);
 
-        double balance = 0;
+        double balance ;
+        balance = amountPaid -billTotal;
         for (int i = 0; i < count; i++) {
             int total = quantity.get(i) * unitPrice.get(i);
-            subTotal += total;
             System.out.printf("""
-                       %s          %d          %d         %d
+                       %s           %d           %d          %d
                     """, items.get(i),quantity.get(i), unitPrice.get(i),total);
         }
-         discountRate = (subTotal * discount) / 100;
-        vat = (subTotal * 17.50) / 100;
-        billTotal = subTotal + vat - discountRate;
-        balance = amountPaid - billTotal;
         System.out.println("-----------------------------------");
         System.out.printf("""
                                     Sub Total: %.2f 
                                     Discount: %.2f
                                     VAT: %.2f
                 ===============================================
-                                BILL TOTAL:  %.2f
+                                Bill Total:  %.2f
+                                Amount Paid: %.2f
+                                    Balance: %.2f
                 ===============================================
-                THIS IS NOT A RECEIPT KINDLY PAY %.2f
-                """, subTotal,discountRate,vat,billTotal,billTotal);
+                THANKS FOR YOUR PATRONAGE...
+                """, subTotal,discountRate,vat,billTotal,amountPaid,balance);
     }
 }
