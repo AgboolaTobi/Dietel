@@ -1,4 +1,4 @@
-package myPythonExercisesInJava;
+package PersonalAssessments;
 
 
 import java.util.Arrays;
@@ -42,8 +42,8 @@ public class ArrayPractice1 {
 
         for (int bothArray : bothArrays) {
             System.out.println(bothArray + " ");
-
         }
+
 
     }
 }

@@ -1,4 +1,4 @@
-package JavaProgramming1.Chapter1;
+package JavaProgramming.Chapter1;
 
 public class Exercise6 {
     public static void main(String[] args) {

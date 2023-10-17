@@ -17,7 +17,9 @@ public class CustomerItems {
             for (int indexOfColumn = 0; indexOfColumn <itemPrice[indexOfRow].length ; indexOfColumn++) {
                 System.out.print(itemPrice[indexOfRow][indexOfColumn] + "     ");
             }
-            System.out.println();
+            System.out.printf("""
+                    
+                    """);
         }
     }
 }
