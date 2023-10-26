@@ -16,7 +16,6 @@ public class Decimal {
         }
         int i;
         for (i = index - 1; i >= 0; i--) {
-            return binary[i];
         }
         return binary[i];
     }

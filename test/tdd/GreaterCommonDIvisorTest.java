@@ -1,6 +1,6 @@
 package tdd;
 
-import PersonalAssessments.GreaterCommonDivisor;
+import PersonalAssessments.GreatestCommonDivisor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +10,7 @@ class GreaterCommonDivisorTest {
     public void testTheGreatestDivisor(){
         int firstNumber = 45;
         int secondNumber = 30;
-        assertEquals(GreaterCommonDivisor.greatDivisor(firstNumber, secondNumber),15);
+        assertEquals(GreatestCommonDivisor.greatDivisor(firstNumber, secondNumber),15);
     }
 
 }

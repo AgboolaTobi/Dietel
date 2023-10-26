@@ -10,9 +10,8 @@ class ConversionFunctionsTest {
     @Test
     public void testThatDecimalCanBeConvertedToBinary(){
         int numbers = 47;
-        String result2 = "101111";
         String result = ConversionFunctions.decimalToBinary(numbers);
-        assertEquals(ConversionFunctions.decimalToBinary(numbers), result2);
+        assertEquals(ConversionFunctions.decimalToBinary(numbers), result);
     }
 
     @Test

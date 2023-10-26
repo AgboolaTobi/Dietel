@@ -1,10 +1,9 @@
 package Assignment1;
 
+import java.util.Arrays;
+
 public class ConversionFunctions {
 
-    public static void main(String[] args) {
-        System.out.println(decimalToBinary(98));
-    }
     public static String decimalToBinary(int number){
         int base = 2;
         StringBuilder result = new StringBuilder(" ");
@@ -40,13 +39,18 @@ public class ConversionFunctions {
         return result;
     }
 
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(numberPrimes(56)));
+    }
+
+
     public static int[] numberPrimes(int number) {
         if (number <= 1) {
             return null;
         }
         int factorCount = 0;
         int originalNumber = number;
-        for (int count = 2; number != 1; count += 1 + (count &1)) {
+        for (int count = 2; number != 1; count += 1) {
             while (number % count == 0) {
                 ++factorCount;
                 number /= count;
@@ -55,7 +59,7 @@ public class ConversionFunctions {
         number = originalNumber;
         int[] factors = new int[factorCount];
         factorCount = 0;
-        for (int count = 2; number != 1; count += 1 + (count &1)) {
+        for (int count = 2; number != 1; count += 1) {
             while (number % count == 0) {
                 factors[factorCount++] = count;
                 number /= count;
