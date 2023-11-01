@@ -2,6 +2,7 @@ package PersonalAssessments;
 
 public class Factorial {
     public static void main(String[] args) {
+
     }
 
     public int factorials(int count){

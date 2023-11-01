@@ -45,6 +45,7 @@ public class CreditCard {
         if (total % 10 == 0){
             result = "Valid";
         }
+
         return result;
     }
 }
