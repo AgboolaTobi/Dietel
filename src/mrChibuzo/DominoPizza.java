@@ -6,95 +6,104 @@ public class DominoPizza {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        int large_size = 10;
-        int medium_size = 6;
-        int small_size = 4;
-        int price_of_large = 5000;
-        int price_of_medium = 3000;
-        int price_of_small = 1200;
 
-        int super_hungry = 4;
+        int largeSize = 10;
+        int mediumSize = 6;
+        int smallSize = 4;
+        int priceOfLarge = 5000;
+        int priceOfMedium = 3000;
+        int priceOfSmall = 1200;
+
+        int superHungry = 4;
         int hungry = 2;
         int classic = 1;
+
         System.out.println("""
                 ===Available on the Order List===
                 1. Large size
                 2. Medium size
                 3. Small size
                 4. Return to menu""");
+
         int orderList = input.nextInt();
+
         switch (orderList) {
             case 1:
-                int super_hungry_guests;
+                int superHungryGuests;
                 System.out.println("Enter the number of super hungry guests: ");
-                super_hungry_guests = input.nextInt();
+                superHungryGuests = input.nextInt();
+
                 System.out.println("Enter the number of hungry guests: ");
-                int hungry_guests = input.nextInt();
+                int hungryGuests = input.nextInt();
+
                 System.out.println("Enter number of classic guest: ");
-                int classic_guests = input.nextInt();
-                int total_number_of_slices_ordered = (super_hungry * super_hungry_guests) + (hungry * hungry_guests) + (classic * classic_guests);
-                if (total_number_of_slices_ordered % large_size == 0) {
-                    int total_number_of_boxes = total_number_of_slices_ordered / large_size;
-                    int total_cost_of_order = total_number_of_boxes * price_of_large;
-                    int number_of_left_over = 0;
-                    System.out.println("Total number of slices ordered: " + total_number_of_slices_ordered + "\n" + "The total number of boxes bought: " + total_number_of_boxes + "\n" + "The total cost of order: " + total_cost_of_order + "\n" + "Total number of left over: " + number_of_left_over);
+                int classicGuests = input.nextInt();
+
+                int totalNumberOfSlicesOrdered = (superHungry * superHungryGuests) + (hungry * hungryGuests) + (classic * classicGuests);
+                if (totalNumberOfSlicesOrdered % largeSize == 0) {
+
+                    int totalNumberOfBoxes = totalNumberOfSlicesOrdered / largeSize;
+                    int totalCostOfOrder = totalNumberOfBoxes * priceOfLarge;
+                    int numberOfLeftOver = 0;
+
+                    System.out.println("Total number of slices ordered: " + totalNumberOfSlicesOrdered + "\n" + "The total number of boxes bought: " + totalNumberOfBoxes + "\n" + "The total cost of order: " + totalCostOfOrder + "\n" + "Total number of left over: " + numberOfLeftOver + "pieces");
                 } else {
-                    int total_number_of_boxes = total_number_of_slices_ordered / large_size + 1;
-                    int total_cost_of_order = (total_number_of_slices_ordered / large_size) * price_of_large + price_of_large;
-                    int number_of_left_over = (total_number_of_boxes * large_size) - total_number_of_slices_ordered;
-                    System.out.println("Total number of slices ordered: " + total_number_of_slices_ordered + "\n" + "The total number of boxes bought: " + total_number_of_boxes + "\n" + "The total cost of order: " + total_cost_of_order + "\n" + "Total number of left over: " + number_of_left_over);
+                    int totalNumberOfBoxes = totalNumberOfSlicesOrdered / largeSize + 1;
+                    int totalCostOfOrder = (totalNumberOfSlicesOrdered / largeSize) * priceOfLarge + priceOfLarge;
+                    int numberOfLeftOver = (totalNumberOfBoxes * largeSize) - totalNumberOfSlicesOrdered;
+                    System.out.println("Total number of slices ordered: " + totalNumberOfSlicesOrdered + "\n" + "The total number of boxes bought: " + totalNumberOfBoxes + "\n" + "The total cost of order: " + totalCostOfOrder + "\n" + "Total number of left over: " + numberOfLeftOver+ "pieces");
                     break;
                 }
             case 2:
                 System.out.println("Enter the number of super hungry guests: ");
-                super_hungry_guests = input.nextInt();
+                superHungryGuests = input.nextInt();
                 System.out.println("Enter the number of hungry guests: ");
-                hungry_guests = input.nextInt();
+                hungryGuests = input.nextInt();
                 System.out.println("Enter number of classic guest: ");
-                classic_guests = input.nextInt();
-                total_number_of_slices_ordered = (super_hungry * super_hungry_guests) + (hungry * hungry_guests) + (classic * classic_guests);
-                if (total_number_of_slices_ordered % medium_size == 0) {
-                    int total_number_of_boxes = total_number_of_slices_ordered / medium_size;
-                    int total_cost_of_order = total_number_of_boxes * price_of_medium;
-                    int number_of_left_over = 0;
-                    System.out.println("Total number of slices ordered: " + total_number_of_slices_ordered + "\n" + "The total number of boxes bought: " + total_number_of_boxes + "\n" + "The total cost of order: " + total_cost_of_order + "\n" + "Total number of left over: " + number_of_left_over);
+                classicGuests = input.nextInt();
+                totalNumberOfSlicesOrdered = (superHungry * superHungryGuests) + (hungry * hungryGuests) + (classic * classicGuests);
+                if (totalNumberOfSlicesOrdered % mediumSize == 0) {
+                    int totalNumberOfBoxes = totalNumberOfSlicesOrdered / mediumSize;
+                    int totalCostOfOrder = totalNumberOfBoxes * priceOfMedium;
+                    int numberOfLeftOver = 0;
+                    System.out.println("Total number of slices ordered: " + totalNumberOfSlicesOrdered + "\n" + "The total number of boxes bought: " + totalNumberOfBoxes + "\n" + "The total cost of order: " + totalCostOfOrder + "\n" + "Total number of left over: " + numberOfLeftOver+ "pieces");
                 } else {
-                    int total_number_of_boxes = total_number_of_slices_ordered / medium_size + 1;
-                    int total_cost_of_order = (total_number_of_slices_ordered / medium_size) * price_of_medium + price_of_medium;
-                    int number_of_left_over = (total_number_of_boxes * medium_size) - total_number_of_slices_ordered;
-                    System.out.println("Total number of slices ordered: " + total_number_of_slices_ordered + "\n" + "The total number of boxes bought: " + total_number_of_boxes + "\n" + "The total cost of order: " + total_cost_of_order + "\n" + "Total number of left over: " + number_of_left_over);
+                    int totalNumberOfBoxes = totalNumberOfSlicesOrdered / mediumSize + 1;
+                    int totalCostOfOrder = (totalNumberOfSlicesOrdered / mediumSize) * priceOfMedium + priceOfMedium;
+                    int numberOfLeftOver = (totalNumberOfBoxes * mediumSize) - totalNumberOfSlicesOrdered;
+                    System.out.println("Total number of slices ordered: " + totalNumberOfSlicesOrdered + "\n" + "The total number of boxes bought: " + totalNumberOfBoxes + "\n" + "The total cost of order: " + totalCostOfOrder + "\n" + "Total number of left over: " + numberOfLeftOver+ "pieces");
                     break;
                 }
             case 3:
                 System.out.println("Enter the number of super hungry guests: ");
-                super_hungry_guests = input.nextInt();
+                superHungryGuests = input.nextInt();
                 System.out.println("Enter the number of hungry guests: ");
-                hungry_guests = input.nextInt();
+                hungryGuests = input.nextInt();
                 System.out.println("Enter number of classic guest: ");
-                classic_guests = input.nextInt();
-                total_number_of_slices_ordered = (super_hungry * super_hungry_guests) + (hungry * hungry_guests) + (classic * classic_guests);
-                if (total_number_of_slices_ordered % small_size == 0) {
-                    int total_number_of_boxes = total_number_of_slices_ordered / small_size;
-                    int total_cost_of_order = total_number_of_boxes * price_of_small;
-                    int number_of_left_over = 0;
-                    System.out.println("Total number of slices ordered: " + total_number_of_slices_ordered + "\n" + "The total number of boxes bought: " + total_number_of_boxes + "\n" + "The total cost of order: " + total_cost_of_order + "\n" + "Total number of left over: " + number_of_left_over);
+                classicGuests = input.nextInt();
+                totalNumberOfSlicesOrdered = (superHungry * superHungryGuests) + (hungry * hungryGuests) + (classic * classicGuests);
+                if (totalNumberOfSlicesOrdered % smallSize == 0) {
+                    int totalNumberOfBoxes = totalNumberOfSlicesOrdered / smallSize;
+                    int totalCostOfOrder = totalNumberOfBoxes * priceOfSmall;
+                    int numberOfLeftOver = 0;
+                    System.out.println("Total number of slices ordered: " + totalNumberOfSlicesOrdered + "\n" + "The total number of boxes bought: " + totalNumberOfBoxes + "\n" + "The total cost of order: " + totalCostOfOrder + "\n" + "Total number of left over: " + numberOfLeftOver+ "pieces");
                 } else {
-                    int total_number_of_boxes = total_number_of_slices_ordered / small_size + 1;
-                    int total_cost_of_order = (total_number_of_slices_ordered / small_size) * price_of_small + price_of_small;
-                    int number_of_left_over = (total_number_of_boxes * small_size) - total_number_of_slices_ordered;
-                    System.out.println("Total number of slices ordered: " + total_number_of_slices_ordered + "\n" + "The total number of boxes bought: " + total_number_of_boxes + "\n" + "The total cost of order: " + total_cost_of_order + "\n" + "Total number of left over: " + number_of_left_over);
+                    int totalNumberOfBoxes = totalNumberOfSlicesOrdered / smallSize + 1;
+                    int totalCostOfOrder = (totalNumberOfSlicesOrdered / smallSize) * priceOfSmall + priceOfSmall;
+                    int numberOfLeftOver = (totalNumberOfBoxes * smallSize) - totalNumberOfSlicesOrdered;
+                    System.out.println("Total number of slices ordered: " + totalNumberOfSlicesOrdered + "\n" + "The total number of boxes bought: " + totalNumberOfBoxes + "\n" + "The total cost of order: " + totalCostOfOrder + "\n" + "Total number of left over: " + numberOfLeftOver+ "pieces");
                     break;
                 }
             default:
                 System.out.println("""
-                ===Available on the Order List===
-                1. Large size
-                2. Medium size
-                3. Small size
-                4. Return to menu""");
+                        ===Available on the Order List===
+                        1. Large size
+                        2. Medium size
+                        3. Small size
+                        4. Return to menu""");
 
         }
+
     }
 
 }
-
