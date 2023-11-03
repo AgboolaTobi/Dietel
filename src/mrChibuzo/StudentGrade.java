@@ -1,5 +1,6 @@
 package mrChibuzo;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StudentGrade {
@@ -24,29 +25,30 @@ public class StudentGrade {
                 }
                 grade[student][scoreOfSubject] = score;
             }
+            System.out.println(Arrays.deepToString(grade));
         }
-        System.out.println("""
-                =======================================================================
-                STUDENT       SUB       SUB      SUB3         SUB4      TOT     AVE
-                =======================================================================
-                """);
-        for (int student = 0; student < grade.length; student++){
-            System.out.print("Student "+ (student + 1) + "\t\t");
-            for (int scoreSubject = 0; scoreSubject < grade[student].length; scoreSubject++){
-                totalOfScores += grade[student][scoreSubject];
-                System.out.print(grade[student][scoreSubject] + "\t\t");
-            }
-            totalTotal[student] = totalOfScores;
-            average = totalOfScores / grade[student].length;
-            System.out.print(totalOfScores + "\t\t" +average);
-            totalOfScores = 0;
-            average = 0;
-            System.out.println();
-        }
-        System.out.println("""
-                   =======================================================================
-                   
-                   =======================================================================\s
-                    """);
+//        System.out.println("""
+//                =======================================================================
+//                STUDENT       SUB       SUB      SUB3         SUB4      TOT     AVE
+//                =======================================================================
+//                """);
+//        for (int student = 0; student < grade.length; student++){
+//            System.out.print("Student "+ (student + 1) + "\t\t");
+//            for (int scoreSubject = 0; scoreSubject < grade[student].length; scoreSubject++){
+//                totalOfScores += grade[student][scoreSubject];
+//                System.out.print(grade[student][scoreSubject] + "\t\t");
+//            }
+//            totalTotal[student] = totalOfScores;
+//            average = totalOfScores / grade[student].length;
+//            System.out.print(totalOfScores + "\t\t" +average);
+//            totalOfScores = 0;
+//            average = 0;
+//            System.out.println();
+//        }
+//        System.out.println("""
+//                   =======================================================================
+//
+//                   =======================================================================\s
+//                    """);
     }
 }

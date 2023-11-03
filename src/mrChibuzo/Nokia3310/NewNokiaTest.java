@@ -56,8 +56,8 @@ public class NewNokiaTest {
                         3. Go Back
                         4.Main Menu
                         """);
-                    int number = scanner.nextInt();
-                    switch (number) {
+                    int options = scanner.nextInt();
+                    switch (options) {
                         case 1:
                             System.out.println("type Of view on mode");
                             break;
@@ -252,14 +252,14 @@ public class NewNokiaTest {
                 8. Prepaid Credit
                 9.Main Menu
                 """);
-            int call = scanner.nextInt();
-            switch (call) {
+            int callRegister = scanner.nextInt();
+            switch (callRegister) {
                 case 1:
                     System.out.println("Missed Call");
                     break;
 
                 case 2:
-                    System.out.println("Recieve Call");
+                    System.out.println("Received Call");
                     break;
 
                 case 3:
