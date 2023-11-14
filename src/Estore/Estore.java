@@ -1,2 +1,5 @@
-package myPythonExercisesInJava.Estore;public class Estore {
+package Estore;
+
+public class Estore {
+    Users users;
 }

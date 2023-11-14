@@ -1,2 +1,6 @@
-package Estore;public class Cart {
+package Estore;
+
+public class Cart {
+    Items items;
+
 }
