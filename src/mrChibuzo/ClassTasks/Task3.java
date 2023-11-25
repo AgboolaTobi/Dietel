@@ -19,6 +19,6 @@ public class Task3 {
 
             average = sum / count;
         }
-        System.out.println("The sum of the scores = " + sum + "\n The average= " + average);
+        System.out.println("The sum of the scores = " + sum + "\n The average = " + average);
     }
 }

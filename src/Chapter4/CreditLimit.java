@@ -6,24 +6,21 @@ public class CreditLimit {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter account number: ");
-        int accountNumber = scanner.nextInt();
+        int account = scanner.nextInt();
         System.out.println("Enter balance at the beginning of the month: ");
-        int initialBalance = scanner.nextInt();
-        System.out.println("Enter total number of items charged for the month: ");
-        int itemsCharged = scanner.nextInt();
-        System.out.println("Enter total of all credits applied to the customer's account for the month: ");
-        int creditApplied = scanner.nextInt();
-        System.out.println("Enter allowed credit: ");
-        int allowedCredit = scanner.nextInt();
-
-        int newBalance;
-        newBalance = initialBalance  + itemsCharged - creditApplied;
-        if (newBalance <= allowedCredit){
-            System.out.println("Credit limit exceeded");
-        }
-
-        System.out.println("==Customer's Details===");
-        System.out.println("Customer's account number= " + accountNumber + "\n" +"total number of items charged for the month: " + itemsCharged + "\n" + "total of all credits applied to the customer's account for the month: " + creditApplied + "\n" + "Allowed credit: " + "New balance: " + newBalance);
-
+        int balance = scanner.nextInt();
+        System.out.println("Enter total of all items charged by the customer this month: ");
+        int charges = scanner.nextInt();
+        System.out.println("Enter the total of all credits applied to the customer's account this month: ");
+        int credits = scanner.nextInt();
+        System.out.println("Enter credit allowed: ");
+        int creditLimit = scanner.nextInt();
+        int newBalance = ( balance + charges - credits);
+            if (newBalance < creditLimit){
+                System.out.printf("""
+                        Dear Customer,
+                            You have exceeded credit limit on your account %d \s
+                        """,account);
+            }
     }
 }

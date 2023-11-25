@@ -2,7 +2,6 @@ package PersonalAssessments;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;

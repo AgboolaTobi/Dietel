@@ -18,8 +18,8 @@ public class Task2 {
 
             sum += score;
 
-            average = sum / count;
         }
-        System.out.println("The average of the scores= " + average);
+        average = sum / count;
+        System.out.println("The average of the scores = " + average);
     }
 }
