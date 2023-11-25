@@ -2,6 +2,7 @@ package BankPracticeTests;
 
 import BankPractice.Account;
 import BankPractice.InvalidDepositAmount;
+import BankPractice.InvalidPin;
 import BankPractice.InvalidWithdrawalAmount;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +12,11 @@ class AccountTest {
 
     @Test
     public void testThatDepositCanBeMadeIntoAccount(){
+        Account account = new Account("Agboola Tobi", "0113266567", "1234");
+        assertThrows(InvalidPin.class,()->account.checkBalance("0000"));
+    }
+    @Test
+    public void testThatBalanceCannotBeCheckedWithAWrongPin(){
         Account account = new Account("Agboola Tobi", "0113266567", "1234");
         account.deposit(1_000);
         assertEquals(1_000,account.checkBalance("1234"));
@@ -31,15 +37,24 @@ class AccountTest {
         account.deposit(1000);
         assertEquals(1000,account.checkBalance("1234"));
     }
+//    @Test
+//    public void testThatWithdrawalCanBeMade(){
+//        Account account = new Account("Agboola Tobi", "0113266567", "1234");
+//        account.deposit(1000);
+//        account.deposit(1000);
+//        account.deposit(1000);
+//        assertEquals(3000,account.checkBalance("1234"));
+//        account.withdraw(1000,"1234");
+//        assertEquals(2000,account.checkBalance("1234"));
+//    }
+
     @Test
-    public void testThatWithdrawalCanBeMade(){
+    public  void testIfWithdrawalIsAttemptedWithTheWrongPin_exceptionIsThrown(){
         Account account = new Account("Agboola Tobi", "0113266567", "1234");
-        account.deposit(1000);
-        account.deposit(1000);
-        account.deposit(1000);
+        account.deposit(3000);
         assertEquals(3000,account.checkBalance("1234"));
-        account.withdraw(1000,"1234");
-        assertEquals(2000,account.checkBalance("1234"));
+        account.withdraw(2000,"0000");
+        assertEquals(3000,account.checkBalance("1234"));
     }
 
     @Test

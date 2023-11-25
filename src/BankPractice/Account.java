@@ -1,10 +1,15 @@
 package BankPractice;
 
 public class Account {
-
+    private final String pin;
+    String accountName;
+    String accountNumber;
     private int balance;
 
     public Account(String accountName, String accountNumber, String pin) {
+        this.accountName = accountName;
+        this.accountNumber = accountNumber;
+        this.pin = pin;
 
     }
 
@@ -18,7 +23,12 @@ public class Account {
     }
 
     public int checkBalance(String pin) {
+        validatePin(pin);
         return balance;
+    }
+
+    private void validatePin(String pin){
+        if (pin != this.pin) throw new InvalidPin("Pin provided is invalid. Kindly check and try again");
     }
 
     public void withdraw(int amount,String pin) {
