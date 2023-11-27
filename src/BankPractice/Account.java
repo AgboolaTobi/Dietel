@@ -28,12 +28,13 @@ public class Account {
     }
 
     private void validatePin(String pin){
-        if (pin != this.pin) throw new InvalidPin("Pin provided is invalid. Kindly check and try again");
+        if (!this.pin.equals(pin)) throw new InvalidPin("Pin provided is invalid. Kindly check and try again");
     }
 
     public void withdraw(int amount,String pin) {
         validateWithdrawal(amount);
         validateWithdrawalAmount(amount);
+        validatePin(pin);
         balance-= amount;
 
     }
@@ -44,5 +45,28 @@ public class Account {
 
     private void validateWithdrawal(int amount) {
         if (amount < 0) throw  new InvalidWithdrawalAmount("Invalid Withdrawal Amount. Don't stress me ooo....");
+    }
+
+    public void checkAccountName(String accountName) {
+        this.accountName = accountName;
+    }
+
+    public String accountName(String accountName) {
+        validateAccountName(accountName);
+        return accountName;
+    }
+
+    private void validateAccountName(String accountName) {
+        if (!this.accountName.equals(accountName)) throw  new InvalidAccountName("Incorrect account name.Kindly check and try again");
+    }
+
+    public void checkAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String collectAccountDetails(String accountName, String pin) {
+        validatePin(pin);
+        validateAccountName(accountName);
+        return accountNumber;
     }
 }
