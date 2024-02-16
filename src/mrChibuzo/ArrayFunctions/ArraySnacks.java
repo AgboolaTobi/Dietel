@@ -1,7 +1,5 @@
 package mrChibuzo.ArrayFunctions;
 
-import java.util.Arrays;
-
 public class ArraySnacks {
 
     public static int getLargest(int[] largest, int total) {
@@ -124,7 +122,7 @@ public class ArraySnacks {
         return check;
     }
 
-//    public static int[] concatination(int[] my_array1, int[] my_array2) {
+//    public static int[] concatenation(int[] my_array1, int[] my_array2) {
 //        int[] my_array = new int[0];
 //        for (int count = 0; count <= my_array1[count]; count++) {
 //            my_array = new int[]{my_array2[count] + my_array1[count]};

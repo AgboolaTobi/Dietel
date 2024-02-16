@@ -17,7 +17,7 @@ class AccountTest {
     @Test
     public void testThatAccountNumberCanBeGottenWhenAccountNumberAndPinIsProvided(){
         Account account = new Account("Agboola Tobi Samuel", "0113266576", "1234");
-        account.checkAccountNumber("0113266576");
+        account.getAccountNumber();
         assertEquals("0113266576",account.collectAccountDetails("Agboola Tobi Samuel","1234"));
     }
 
@@ -38,7 +38,7 @@ class AccountTest {
     @Test
     public void testThatIfAccountNameIsWrongExceptionIsThrown(){
         Account account = new Account("Agboola Tobi Samuel", "0113266576", "1234");
-        assertThrows(InvalidAccountName.class,()->account.accountName("Agboola Tobi Samuel"));
+        assertThrows(InvalidAccountName.class,()->account.accountName("Agboola Tobi"));
     }
     @Test
     public void testThatBalanceCannotBeCheckIfAccountNameIsIncorrect(){
@@ -106,7 +106,7 @@ class AccountTest {
     @Test
     public void testThatWithdrawalAmountCannotBeMoreThanBalance(){
         Account account = new Account("Agboola Tobi", "0113266567", "1234");
-
+        account.deposit(2000);
         assertThrows(InvalidWithdrawalAmount.class,()->account.withdraw(5000,"1234"));
     }
 

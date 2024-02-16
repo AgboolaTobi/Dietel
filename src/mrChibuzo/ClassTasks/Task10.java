@@ -8,12 +8,12 @@ public class Task10 {
         int score;
         int count;
         String caster;
-        String result = " ";
+        StringBuilder result = new StringBuilder(" ");
         for (count = 1; count <= 10; count++) {
             System.out.print("Enter score:");
             score = scanner.nextInt();
             caster = String.valueOf(score);
-            result = result + " " + caster;
+            result.append(" ").append(caster);
         }
         System.out.print(" The scores are:" + "[" + result + " ]");
 

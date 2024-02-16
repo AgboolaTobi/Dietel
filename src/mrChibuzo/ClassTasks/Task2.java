@@ -8,7 +8,7 @@ public class Task2 {
         Scanner scanner = new Scanner(System.in);
 
         int sum = 0;
-        int average = 0;
+        int average;
         int count;
 
         for (count = 1 ; count <= 10 ; count ++){

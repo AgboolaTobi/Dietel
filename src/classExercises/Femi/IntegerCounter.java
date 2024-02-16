@@ -16,6 +16,10 @@ public class IntegerCounter {
         return store;
     }
 
+    public static void main(String[] args) {
+        String[] array = new String[]{"array234"};
+        System.out.println(countInt(array));
+    }
 
 
 }

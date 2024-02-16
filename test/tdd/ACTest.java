@@ -17,7 +17,19 @@ public class ACTest {
 
         myAc.powerOn();
         assertTrue(myAc.isOn());
+        myAc.powerOff();
+        assertFalse(myAc.isOn());
+    }
+
+
+    @Test
+    public void testThatACCanBeTurnedOf(){
+        AC myAc = new AC();
+        assertFalse(myAc.isOn());
+
         myAc.powerOn();
+        assertTrue(myAc.isOn());
+        myAc.powerOff();
         assertFalse(myAc.isOn());
     }
     @Test

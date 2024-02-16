@@ -3,24 +3,47 @@ package Assignment1;
 import java.util.Scanner;
 
 public class DoWhile {
+
+
+
+    public  static double average(int ...numbers){
+
+        double theAverage;
+        int total = 0;
+        int count = 0;
+        for (int number: numbers){
+            total += number;
+            count++;
+        }
+
+        theAverage = (double) total / count;
+
+        return theAverage;
+    }
+
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        double average;
+        int count = 0;
+//        System.out.println("Do you wish to continue: ");
+        String response = scanner.next();
+        while (!response.equalsIgnoreCase("NO")){
+            System.out.println("Enter input: ");
+            int number = scanner.nextInt();
+            System.out.println("Do you wish to continue: ");
+            response = scanner.next();
 
-        int number;
-        do {
-            System.out.println("Enter a number: ");
-            int firstNumber = scanner.nextInt();
+            sum += number;
+            count++;
+        }
+        average = (double) sum / count;
 
-            System.out.println("Enter a number: ");
-            int secondNumber = scanner.nextInt();
+        System.out.println("The average = " + average);
 
-            int sum = firstNumber + secondNumber;
-            System.out.println("The sum of the numbers = " + sum);
+//
 
-            System.out.println("Do you wish to perform this operation again(press 1 to continue): ");
-            number = scanner.nextInt();
-
-        } while (number == 1);
 
     }
 }

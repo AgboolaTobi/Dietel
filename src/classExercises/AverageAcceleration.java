@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AverageAcceleration {
     public static void main(String[] args){
         Scanner toby = new Scanner(System.in);
-        System.out.print("Enter initialVeloity v0: ");
+        System.out.print("Enter initialVelocity v0: ");
         double initialVelocity = toby.nextDouble();
 
         System.out.print("Enter finalVelocity: ");

@@ -14,12 +14,14 @@ public class Exercise17 {
         double total_mpg = 0.0;
         int trips = 0;
 
+
         System.out.print( "Enter trip 1 mileage (as integer) or -1 to quit: ");
         miles = input.nextInt();
         if ( miles != -1 ) {
             System.out.print( "Enter trip 1 gallons (as integer): ");
             gallons = input.nextInt();
             trips++;
+
         }
         while ( miles != -1 ) {
             total_miles += miles;

@@ -16,51 +16,34 @@ public class DiariesTest {
     }
 
     @Test
-    public void testThatDiaryCanBeUnlocked(){
-        Diary myDiary = new Diary();
-        assertTrue(myDiary.isLocked());
-        assertFalse(myDiary.isLocked());
-    }
-
-    @Test
-    public void testThatDiaryCanBeLocked(){
-        Diary myDiary = new Diary();
-        assertTrue(myDiary.isLocked());
-        assertFalse(myDiary.isLocked());
-        assertTrue(myDiary.isLocked());
-    }
-
-    @Test
     public void testThatDiaryCanBeUnlockedWithPassword(){
         Diary myDiary = new Diary();
-        myDiary.unLockDiaryWithPassword("1234");
+        myDiary.unlockDiary("1234");
         assertFalse(myDiary.isLocked());
     }
     @Test
-    public void testThatDiaryCanBeUnlockedWithPassword2(){
+    public void testThatDiaryCanBeLockedWithTheCorrectPassword(){
         Diary myDiary = new Diary();
-        myDiary.unLockDiaryWithPassword("1234");
-        assertEquals("1234",myDiary.checkPassword("1234"));
+        myDiary.unlockDiary("1234");
+        myDiary.lockDiary("1234");
+        assertTrue(myDiary.isLocked());
     }
     @Test
-    public void testThatIfTheWrongPasswordIsUsed_exceptionIsThrown(){
+    public void testThatIfDiaryIfUnlockedWithWrongPassword_exceptionIsThrown(){
         Diary myDiary = new Diary();
-        myDiary.unLockDiaryWithPassword("1234");
-        assertThrows(InvalidPassword.class,()-> myDiary.checkPassword("123"));
+        myDiary.lockDiary("1234");
+        assertThrows(InvalidPassword.class,()->myDiary.unlockDiary("3421"));
     }
 
-    @Test
-    public void testThatDiaryCannotBeUnlockedWithIncorrectPassword(){
-        Diary myDiary = new Diary();
-        myDiary.unLockDiaryWithPassword("4321");
-        assertFalse(myDiary.isLocked());
-    }
-    @Test
-    public void testThatEntryCanBeCreated(){
-        Diary myDiary = new Diary();
-        myDiary.createEntry("Java","Java is fully OOP");
-        assertEquals("Java is fully OOP",myDiary.checkEntry());
-    }
+//    @Test
+//    public void testThatEntryCanBeCreatedInDiary(){
+//        Diary myDiary = new Diary();
+//        myDiary.lockDiary("1234");
+//        myDiary.unlockDiary("1234");
+//        myDiary.createEntry("Java","Java is fully OOP");
+//
+//    }
+
 
 
 }

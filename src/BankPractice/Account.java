@@ -60,8 +60,8 @@ public class Account {
         if (!this.accountName.equals(accountName)) throw  new InvalidAccountName("Incorrect account name.Kindly check and try again");
     }
 
-    public void checkAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
     public String collectAccountDetails(String accountName, String pin) {
@@ -69,4 +69,17 @@ public class Account {
         validateAccountName(accountName);
         return accountNumber;
     }
+    public String toString(){
+        return String.format("""
+                ========================
+                Account successfully created. Here are your account details
+                Account name: %s
+                Account Number: %s
+                Account balance: %s
+                Account pin: Your pin is active
+                ========================
+                """, accountName, accountNumber, balance);
+    }
+
+
 }

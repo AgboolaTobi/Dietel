@@ -8,7 +8,7 @@ public class Exercise14 {
         for (int year = 1; year <= 10; year++) {
             for (rate = 0.05 ; rate <= 0.1; rate = rate + 0.01 ){
                 double amount = principal * Math.pow(1.0 + rate, year);
-                System.out.printf("%4d%, 20.2f%n", year, amount);
+                System.out.printf("%4d%, 20.2f%n, at a rate of %.4f", year++, amount, rate);
 
             }
         }
