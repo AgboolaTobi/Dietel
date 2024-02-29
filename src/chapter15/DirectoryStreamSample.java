@@ -15,7 +15,7 @@ public class DirectoryStreamSample {
             directoryStream.close();
         }
         catch (IOException exception){
-
+            exception.printStackTrace();
         }
 
 

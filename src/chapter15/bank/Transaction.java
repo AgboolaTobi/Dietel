@@ -1,6 +1,8 @@
 package chapter15.bank;
 
-public class Transaction {
+import java.io.Serializable;
+
+public class Transaction{// instead of using json to convert object using stringyfy,we can implement the Serializable interface
     private String sender;
      private String recipient;
      private  String amount;

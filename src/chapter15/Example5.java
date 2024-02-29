@@ -1,0 +1,32 @@
+package chapter15;
+
+import java.io.PrintStream;
+
+public class Example5 {
+    public static void main(String[] args) {
+
+        try (PrintStream printStream = new PrintStream(System.out)){
+            printStream.println("""
+                     [i carry your heart with me(i carry it in]
+                    By E. E. Cummings
+                    i carry your heart with me(i carry it in
+                    my heart)i am never without it(anywhere
+                    i go you go,my dear;and whatever is done
+                    by only me is your doing,my darling)
+                                                                          
+                   i fear no fate(for you are my fate,my sweet)
+                   i want no world(for beautiful you are my world,my true)
+                    and it’s you are whatever a moon has always meant
+                    and whatever a sun will always sing is you
+                                        
+                    here is the deepest secret nobody knows
+                    (here is the root of the root and the bud of the bud
+                    and the sky of the sky of a tree called life;which grows
+                    higher than soul can hope or mind can hide)
+                    and this is the wonder that's keeping the stars apart
+                                        
+                    i carry your heart(i carry it in my heart)
+                    """);
+        }
+    }
+}
