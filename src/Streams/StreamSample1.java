@@ -8,12 +8,13 @@ public class StreamSample1 {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(1,2,3,4,5,6,7,8,9,10);
         Stream<Integer> stream = numbers.stream();
-        stream.filter((number)->number % 2 == 0) // these are intermediate points
-                .map((number)-> number * number) // these are intermediate points
+        stream.filter((number)->number % 2 == 0) // these are intermediate operation
+                .map((number)-> number * number) // these are intermediate operation
                 .forEach(System.out::println); // this is the terminal point
 
 
-        numbers.stream()                              // you'd usually see operations in streams done this way than the other way round.
+        numbers.stream()                              // you'd usually see operations in streams done this way than
+                // the other way round.
                 .filter((number)->number % 2 == 0)
                 .map((number)-> number * number)
                 .forEach(System.out::println);

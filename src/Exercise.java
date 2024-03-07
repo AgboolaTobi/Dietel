@@ -8,7 +8,7 @@ public class Exercise {
         int number = input.nextInt();
         int square = number*number;
 
-        System.out.println("The square of " + number +  " " + "is" + " " + square);
+        System.out.printf("The square of " + number +  " " + "is" + " " + square);
 
     }
 }
